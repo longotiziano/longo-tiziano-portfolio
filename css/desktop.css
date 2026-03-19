@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "msPixelTahoma";
+  src: url('../static/fonts/windows-xp-tahoma.otf');
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  text-rendering: optimizeSpeed;
+  font-kerning: none;
+  font-family: "msPixelTahoma","Tahoma",sans-serif;
+  font-size: 20px;
+  cursor: url('../static/cursors/default.cur'),auto;
+}
+
+#desktop {
+  height: calc(100vh - 4vh);
+  position: relative;
+  color: #FFFFFF;
+  text-shadow: 0px 0px 3px #0009,1px 2px 2px #000b;
+  background-image: url('../static/images/windows-img.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column; /* top to bottom */
+  align-items: flex-start; /* top-left */
+  gap: 5px 5px 5px 5px/* between icons */
+}
+
+#desktop .item {
+  width: 80px;  
+  height: 70px;
+  text-align: center;
+}
+
+#taskbar {
+  position: absolute; /* it's like roblox's anchor */
+  display: flex;
+  background: linear-gradient(to bottom,#3168d5 2%,#4993e6 8%,#245dd7 17%,#2257d5 30%,#2663e0 89%,#1941a5 98%);
+  bottom: 0px;
+  height: 4vh;
+  width: 100%;
+  z-index: 850;
+}
+

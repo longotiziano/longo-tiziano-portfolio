@@ -3,70 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tiziano Longo</title>
+    <meta property="og:title" content="Tiziano Longo">
+    <meta property="og:description" content="Computer engineering student focused on Software Development">
+    <!-- meta property="og:image" content="https://tusitio.com/preview.png" -->
+    <!-- meta property="og:url" content="https://tusitio.com" -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Tiziano Longo Portfolio">
+    <meta property="og:locale" content="en_US">
 
-    <link rel="stylesheet" href="https://unpkg.com/xp.css">
-    <link rel="stylesheet" href="xp-theme.css">
-    <link rel="icon" href="imgs/portfolio-iconn.png" type="image/png"/>
+    <title>Tiziano Longo's Portfolio</title>
+
+    <link rel="stylesheet" href="css/desktop.css">
+    <link rel="stylesheet" href="css/taskbar.css">
+    <link rel="icon" href="static/images/portfolio-icon.png" type="image/png"/>
+
 </head>
-
 <body>
-    <div>
-    <div class="desktop">
-        <div class="xp-window">
-            <p>Hi! I'm</p>
-            <h1>Tiziano Longo</h1>
-            <p>Software Developer & Computer Engineering Student</p>
-        </div>
-        <h3>About me</h3>
-
-        <h3>Skills</h3>
-
-        <div class="window" style="width: 300px">
-        <div class="title-bar">
-            <div class="title-bar-text">A Window With Stuff In It</div>
-            <div class="title-bar-controls">
-            <button aria-label="Minimize"></button>
-            <button aria-label="Maximize"></button>
-            <button aria-label="Close"></button>
+    <div id="desktop">
+        <div class="item">
+            <div class="icon">
+                <img src="static/icons/messenger.png">
             </div>
+            <div class="label">Contact Me</div>
         </div>
-        <div class="window-body">
-            <p>There's so much room for activities!</p>
+        <div class="item">
+            <div class="icon">
+                <img src="static/icons/about-me.png">
+            </div>
+            <div class="label">About Me</div>
         </div>
+        <div class="item">
+            <div class="icon">
+                <img src="static/icons/projects.png">
+            </div>
+            <div class="label">Projects</div>
         </div>
     </div>
-
-    <nav class="title-bar taskbar">
-    <ul class="taskbar-list">
-        <li>
-        <button>
-            <img src="imgs/projects-icon.png" width="16" height="16" alt="About me" />
-            About me
-        </button>
-        </li>
-        <li>
-        <button>
-            <img src="imgs/projects-icon.png" width="16" height="16" alt="Projects" />
-            Projects
-        </button>
-        </li>
-        <li>
-        <button>
-            <img src="imgs/projects-icon.png" width="16" height="16" alt="Projects" />
-            Experience
-        </button>
-        </li>
-        <li>
-        <button>
-            <img src="imgs/projects-icon.png" width="16" height="16" alt="Projects" />
-            Contact
-        </button>
-        </li>
-    </ul>
-    </nav>
-
+    <div id="taskbar">
+    <button class="windows-home">
+        <img src="static/images/win-icon.png">
+    </button>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
