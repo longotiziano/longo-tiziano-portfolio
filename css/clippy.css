@@ -1,17 +1,18 @@
 .clippy {
-    z-index: 1000;
-    position: fixed;
-    width: 20%;
-    height: 25%;
-    position: fixed;
-    bottom: 16vh;
-    right: 20px;
+  z-index: 1000;
+  position: fixed;
+  width: 20%;
+  height: 25%;
+  position: fixed;
+  bottom: 16vh;
+  right: 20px;
 }
 
 .clippy img {
-    width: 100%;
-    height: auto;
-}
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+} 
 
 .clippy-bubble {
   background: #FFFFE1;
@@ -22,7 +23,15 @@
   font-size: 12px;
   color: #000;
   margin-bottom: 5px;
-  position: relative;
+  position: absolute;
+  bottom: 110%;
+  right: 50%;
+  font-size: 1.5rem;
+  opacity: 0;
+}
+
+.clippy-bubble.visible {
+  opacity: 1;
 }
 
 .clippy-bubble::after {
@@ -33,4 +42,16 @@
   border-width: 8px 8px 0;
   border-style: solid;
   border-color: #000 transparent transparent;
+}
+
+.clippy-text-sizer {
+  visibility: hidden;
+}
+
+.clippy-text-visible {
+  position: absolute;
+  top: 8px;    /* mismo valor que padding-top del bubble */
+  left: 12px;  /* mismo valor que padding-left del bubble */
+  right: 12px; /* mismo valor que padding-right del bubble */
+  bottom: 8px;
 }
