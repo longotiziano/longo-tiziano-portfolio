@@ -21,25 +21,43 @@ body {
   background-image: url('../static/images/windows-img.jpg');
   background-size: cover;
   background-position: center;
-  display: flex;
-  flex-direction: column; /* top to bottom */
-  align-items: flex-start; /* top-left */
-  gap: 5px 5px 5px 5px/* between icons */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 80px);
+  grid-template-rows: repeat(auto-fill, 90px);
+  gap: 10px;
+  align-content: start;
+  justify-content: start;
+  padding: 10px;
+  box-sizing: border-box;
+  grid-auto-flow: column;
 }
 
-#desktop .item {
-  width: 80px;  
-  height: 70px;
-  text-align: center;
-}
-
-#taskbar {
-  position: absolute; /* it's like roblox's anchor */
-  display: flex;
-  background: linear-gradient(to bottom,#3168d5 2%,#4993e6 8%,#245dd7 17%,#2257d5 30%,#2663e0 89%,#1941a5 98%);
-  bottom: 0px;
-  height: 4vh;
+.item {
+  position: relative;
   width: 100%;
-  z-index: 850;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
+.item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(12, 81, 231, 0.26);
+  outline: 1px dotted rgba(255,255,255, 0.6);
+  opacity: 0;
+  z-index: 1;
+}
+
+.item:hover::before {
+  opacity: 0.4;
+}
+.item.selected::before {
+  opacity: 1;
+}

@@ -1,0 +1,36 @@
+.clippy {
+    z-index: 1000;
+    position: fixed;
+    width: 20%;
+    height: 25%;
+    position: fixed;
+    bottom: 16vh;
+    right: 20px;
+}
+
+.clippy img {
+    width: 100%;
+    height: auto;
+}
+
+.clippy-bubble {
+  background: #FFFFE1;
+  border: 1px solid #000;
+  border-radius: 6px;
+  padding: 8px 12px;
+  max-width: 200px;
+  font-size: 12px;
+  color: #000;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.clippy-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  right: 20px;
+  border-width: 8px 8px 0;
+  border-style: solid;
+  border-color: #000 transparent transparent;
+}

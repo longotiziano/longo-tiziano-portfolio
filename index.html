@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="Tiziano Longo">
     <meta property="og:description" content="Computer engineering student focused on Software Development">
-    <!-- meta property="og:image" content="https://tusitio.com/preview.png" -->
-    <!-- meta property="og:url" content="https://tusitio.com" -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Tiziano Longo Portfolio">
     <meta property="og:locale" content="en_US">
@@ -15,8 +13,12 @@
 
     <link rel="stylesheet" href="css/desktop.css">
     <link rel="stylesheet" href="css/taskbar.css">
-    <link rel="icon" href="static/images/portfolio-icon.png" type="image/png"/>
+    <link rel="stylesheet" href="css/clippy.css">
 
+    <link rel="icon" href="./static/icons/portfolio-icon.png" type="image/png"/>
+
+    <script src="./js/items.js"></script>
+    <script type="module" src="./js/clippy.js"></script>
 </head>
 <body>
     <div id="desktop">
@@ -24,19 +26,19 @@
             <div class="icon">
                 <img src="static/icons/messenger.png">
             </div>
-            <div class="label">Contact Me</div>
+            <label>Contact Me</label>
         </div>
         <div class="item">
             <div class="icon">
                 <img src="static/icons/about-me.png">
             </div>
-            <div class="label">About Me</div>
+            <label>About Me</label>
         </div>
         <div class="item">
             <div class="icon">
                 <img src="static/icons/projects.png">
             </div>
-            <div class="label">Projects</div>
+            <label>Projects</label>
         </div>
     </div>
     <div id="taskbar">
@@ -44,5 +46,12 @@
         <img src="static/images/win-icon.png">
     </button>
     </div>
+    <div class="clippy">
+        <div class="clippy-bubble">
+            <span class="clippy-text">¡Hola! ¿Necesitás ayuda?</span>
+        </div>    
+        <img src="./static/clippy/clippy-looking.gif">
+    </div>
+    <script src="./js/items.js"></script>
 </body>
 </html>
